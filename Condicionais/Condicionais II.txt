@@ -1,0 +1,115 @@
+--IF TERNARIO
+O operador condicional (ternario) eh o unico operador JavaScript que possui tres operandos.
+Este operador eh frequentemente usado como um atalho para a instrucao if.
+
+A sintaxe desse operador segue a regra abaixo:
+
+condicao ? expr1 : expr2
+
+Onde:
+
+condicao eh uma expressao que eh avaliada como true ou false
+expr 1 e expr 2 sao expressoes como valores de qualquer tipo.
+
+ex.:
+
+"O preco eh" + (isAssinante ? "R$2.00" : "R$10.00")
+
+caso isAssinante seja true, a string vai concatenar R$2.00. Caso seja falsa, vai concaternar R$10.00
+
+
+
+--SWITCH-CASE
+
+Para ilustrar a próxima estrutura condicional, vamos considerar o seguinte problema.
+Suponha que você trabalha em um mercado, e precisa estruturar a área dos preços de fruta. 
+
+Criamos um sistema que recebe o nome da fruta, e para cada fruta, devemos atribuir um valor para uma variável `preco`.
+Neste sistema, as frutas cadastradas e possíveis são:
+
+- Banana: R$ 5.00 a dúzia
+- Laranja: R$ 4.50 a bacia
+- Maçã: R$ 7.00 a bacia
+- Limão: R$ 3.00 a bacia
+- Melão: R$ 6.00 a unidade
+- Melancia: R$ 10.00 a unidade
+
+Vamos pensar em como poderíamos fazer esta separação utilizando a estrutura de if/else if/else
+
+
+ex.:
+
+let preco;
+
+const fruta = prompt("digite o nome da fruta");
+
+if(fruta === "banana"){
+	preco = 5;
+}else if(fruta === "laranja"){
+	preco = 4.5;
+}else if(fruta === "maçã"){
+	preco = 7;
+}else if(fruta === "limão"){
+	preco = 3;
+}else if(fruta === "melão"){
+	preco = 6;
+}else if(fruta === "melancia"){
+	preco = 10;
+}else{
+	console.log("fruta não encontrada");
+}
+
+--SWITCH:
+
+A estrutura de switch permite que possamos escrever essa sintaxe de forma mais simples. 
+Observe o mesmo código escrito com a estrutura de switch.
+
+-switch(termo)
+
+A palavra switch espera entre parenteses a expressao a ser comparada. Esta expressap normalmente eh uma string 
+ou um numero, e a operacao relacional eh uma operacao de "igual" (===)
+
+-case
+
+cada case eh uma possibilidade de valor para o termo que estamos buscando. Caso o valor do case seja igual ao termo,
+o codigo descrito abaixo da palavra case sera executado
+
+-break
+
+A palavra break interrompe a execucao do switch caso o termo tenha sido encontrado, eo codigo tenha sido executado.
+Usamos isso para nao precisar mais percorrer o switch apos atender nosso case.
+
+-default
+
+a palavra default descreva a sequencia de codigo que deve ser executada se nenhum dos cases atender ao nosso switch.
+No nosso caso, se o nome passado para a variavel fruta nao for igual a nenhuma das frutas que temos.
+
+
+ex.:
+
+let preco;
+
+const fruta = prompt("digite o nome da fruta");
+
+switch(fruta){
+	case "banana":
+		preco = 5;
+		break;
+	case "laranja":
+		preco = 4.5;
+		break;
+	case "maçã":
+		preco = 7;
+		break;
+	case "limão":
+		preco = 3;
+		break;
+	case "melão":
+		preco = 6;
+		break;
+	case "melancia":
+		preco = 10;
+		break;
+	default:
+		console.log("fruta não encontrada");	
+}

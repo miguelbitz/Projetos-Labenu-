@@ -1,0 +1,8 @@
+(vs code) escrever html:5 ou ! e usar o tab, ele escreve o cabeçalho do html automatico
+
+(js script) usar // para escrever comentarios no codigo, comentario em linha
+pode usar alt+shift+a para comentario em bloco (/* */)
+
+console.log= para imprimir no devtool
+
+prompt = pegar informações do usuario

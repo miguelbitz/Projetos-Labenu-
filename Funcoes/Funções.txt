@@ -1,0 +1,54 @@
+- Função:
+
+	Um função é um bloco de código que pode ser chamado (ou invocado) a partir do seu nome.
+Permite reutilizar variáveis.
+
+	A estrutura de uma função segue a estrutura abaixo:
+	
+	function calcularArea(altura, largura){
+		cont area = altura*largura;
+		console.log(area);
+	}
+
+	calcularArea(3,2);
+
+-Declarando funções
+
+O primeiro passo para criar uma função é declará-la.
+
+A declaração atribui um bloco de código a um identificador (ou um nome). O bloco de código é escrito entre chaves `{}`.
+
+- `function` e `calcularArea` são a indicação de declaração e o identificador da função, respectivamente;
+- `altura` e `largura` entre os parênteses são os parâmetros, isto é, os valores que serão utilizados dentro do corpo da função;
+- `const area = altura*largura` e `console.log(area)` são o corpo da função. A lógica propriamente dita;
+
+
+-Chamando funções
+
+Podemos chamar, invocar ou executar uma função usando o seu identificador. Quando fazemos isso, o bloco de código definido na declaração é executado.
+Toda vez que o código encontrar uma chamada da função, o bloco entre as chaves da declaração será executado.
+
+
+-Parâmetros, argumentos e escopo
+
+Funções podem receber entradas, e se receberem, devem ser usadas no bloco do código dentro da função.
+
+**Parâmetros** são como variáveis criadas na declaração da função, em que podemos guardar os argumentos (valores) a serem enviados para a função.
+
+**Argumentos** são os valores (strings, numbers, booleanos) passados na chamada da função. Cada parâmetro recebe seu valor dos argumentos,
+seguindo a mesma ordem.
+
+Na prática, os valores passados como argumento substituirão as variáveis que estão como parâmetros na declaração da função.
+
+
+-Escopo
+
+O escopo determina quais variáveis serão acessíveis ao rodarmos o código.
+
+No Javascript temos dois tipos de escopo:
+
+- **Escopo Global**: variáveis no escopo global podem ser acessadas de qualquer lugar do código.
+- **Escopo Local**: variáveis no escopo local somente podem ser acessadas dentro do escopo em que foram declaradas.
+
+As variáveis definidas dentro de uma função possuem escopo local
+

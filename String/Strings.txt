@@ -1,0 +1,85 @@
+--String
+Strings sao os tipos referentes a textos. Strings sao o que chamamos de cadeias (sequencias) de caracteres.
+As formas mais comuns de escrever strings sao:
+
+	aspas duplas: const nome = "miguel"
+	aspas simples: const sobrenome = 'alves'
+	Crase (template string): const username = `miguelbitz`
+
+Strings sao objetos internos do JavaScript que possuem algumas ferramentas ja criadas, no qual podemos acessar e usar.
+
+Importante:
+-Chamamos este mecanismo interno de prototipo.
+-As informacoes sobre o objeto sao propriedades.
+-As acoes que realizamos sao metodos.
+
+Tem ()no final? METODO
+
+Nao tem () no final? PROPRIEDADE
+
+${} = para usar uma vareal ventro da string usando crase
+	ex.: `Meu nome eh ${nome} e tenho ${idade} anos`
+
+\" = para usar aspas dentro das aspas da string.
+
+\n = para criar uma quebra de linha dentro de uma mesma string.
+
+-Length:
+
+A propriedade lenght nos diz qual eh o tamanho de uma string, incluindo espacos.
+Podemos acessa-las escrevendo nomeVariavel.lenght
+
+-toUpperCase() e toLower case():
+
+Os metodos toUpperCase() e toLowerCase() transformam as letras da String em maiusculas e minusculas, respectivamente
+
+-trim():
+
+O metodo trim() retira os espacos que existem antes e depois da sua string.
+Util em formularios, como de login!
+	ex.:
+	const email = "  miguel@gmail.com  "
+	
+	console.log(email.trim())
+	// "miguel@gmail.com"
+
+-replace() e replaceAll():
+
+Os metodos replace() e replaceAll() substituem a primeira, ou todas as ocorrencias de algum termo presente
+na sua string, respectivamente
+	ex.:
+	const frase = "hoje comi batata, adoro batata"
+	const novaFrase = frase.replace("batata", "tomate")
+	//novaFrase - Hoje comi tomate, adoro batata
+
+	const frase = "hoje comi batata, adoro batata"
+	const novaFrase = frase.replaceAll("batata", "tomate")
+	//novaFrase - Hoje comi tomate, adoro tomate
+
+-includes()
+
+O metodo includes(caracteres) determina se um conjunto de caracteres pode ser encontrado dentro de outra string,
+retornando true ou false.
+	ex.:
+	const frase = "Hoje comi cenoura"
+	frase.includes("cenoura") //true
+	frase.includes("batata")//false
+
+-substring(inicio i, ate i)
+
+Sintaxe:
+substring(indexStart)
+substring(indexStart, indexEnd)
+
+
+O metodo retorna a parte da string entre o inicio e o final do index, ou ate o final da string.
+
+ex.:
+const str = 'Mozilla';
+
+console.log(str.substring(1, 3));
+// expected output: "oz"
+
+console.log(str.substring(2));
+// expected output: "zilla"
+	

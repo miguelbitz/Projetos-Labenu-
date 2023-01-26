@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 4rem;
+}
+
+/* tablets */
+@media screen and (min-device-width : 481px) and (max-device-width : 800px) {
+    main{
+        background-color: yellowgreen;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section{
+        border: 2px solid green;
+        font-size: 2rem;
+    }
+}
+
+/* celulares */
+@media screen and (max-device-width : 480px) {
+    main{
+        background-color: red;
+        grid-template-columns: 1fr;
+    }
+
+    section{
+        border: 2px solid yellow;
+        font-size: 1rem;
+    }
+}

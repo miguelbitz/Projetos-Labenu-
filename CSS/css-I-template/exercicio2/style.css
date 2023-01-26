@@ -1,0 +1,29 @@
+ .longe-bordas {
+  padding: 0 10px;
+  background-color: #FFA6A9;
+}
+
+.afastado {
+  margin: 0 20px;
+  background-color: #77C0ED;
+}
+
+.alto {
+  height: 300px;
+  background-color: #C3E887;
+}
+
+.largo {
+  width: 500px;
+  border: 2px solid black;
+  background-color: #FFE396;
+}
+
+.bordado {
+  border: 2px dashed black;
+  background-color: #AF9BCC;
+}
+
+.sumido {
+  display: none;
+}

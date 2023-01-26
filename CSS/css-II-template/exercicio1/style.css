@@ -1,0 +1,24 @@
+/* *{
+    color: orange;
+} */
+
+h1,h2,h3,h4,h5,h6,p{
+    color: orange;
+}
+
+.texto-com-background{
+    background-color: yellow;
+}
+
+#texto-com-outra-cor{
+    color: darkgreen;
+}
+
+section > p {
+    color: black;
+}
+
+/* atingindo elemento da section */
+section p:nth-child(3){
+    background-color: aqua;
+}

@@ -1,0 +1,25 @@
+Algoritmo = Uma serie de etapas ou passo que precisam ser seguidos para se ter o resultado esperado.
+	ex.: receita de bolo
+
+Função = São ações dentro da linguagem.
+
+Condicionais = Possibilidade dependendo de algum critério.
+	ex.: IF condition
+
+Loops = São ciclos dentro do código, vão se repetindo até sair o resultado esperado.
+
+Fluxograma = Visualição dos passos a serem seguido para formar o código.
+	Retangulo - representa uma ação
+	Losango - representa uma tomada de decisão
+
+Lógica binária = Linguagem do computador. Utilizamos 0 = desligado 1 = ligado
+
+(Scratch)
+Linguagem de programação gráfica
+
+Evento = Gatilhos que alteram o estado das coisas.
+
+Movimento = Atividades que o "personagem" irá realizar.
+
+Variáveis = Valores do código que alteram.
+

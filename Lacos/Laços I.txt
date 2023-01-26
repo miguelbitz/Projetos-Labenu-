@@ -1,0 +1,42 @@
+--while 
+
+("enquanto") é a estrutura mais básica de criação de loops.
+Funciona de forma muito parecida com um `if`. Enquanto a condição de continuação for `true`, o laço seguirá se repetindo.
+
+Exemplo - **imprimindo alguns números**:
+
+let i = 0; // let i começa valendo 0  (COMEÇO)
+
+while(i < 10){ (CONDIÇÃO DE CONTINUAÇÃO)
+	/*condição: (enquanto i for menor que 10, faça o que está
+	entre as chaves {}*/
+	console.log(i); //imprime o valor de i (AÇÃO REPETIDA)
+
+	i++; //adiciona mais um à variável i (INCREMENTO)
+}
+
+--for
+
+São bem comuns os laços em que temos a condição de continuação atrelada a um número que é incrementado.
+O laço for é uma maneira que permite simplificar a escrita de laços que tenham este comportamento.
+Observe abaixo o mesmo código utilizando o while e o for.
+
+usando while:
+
+let i = 0;
+
+while(i < 10){
+
+	console.log(i);
+
+	i++;
+
+}
+//No console será impresso os números de 1 à 9 
+
+usando for:
+
+for(let i = 0; i < 10; i++){
+	console.log(i);
+}
+//No console será impresso os números de 1 à 9 

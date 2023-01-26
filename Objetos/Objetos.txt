@@ -1,0 +1,276 @@
+--Objetos
+
+As caracteristicas dos objetos sao o que chamamos de PROPRIEDADES.
+
+As ações que o objeto executa sao os METODOS.
+
+Propriedades podem ser de qualquer tipo de dado.
+
+ex.: 
+CARRO:
+-propriedades:
+	marca
+	cor
+	ano
+	classe
+	eh flex?
+
+-CRIANDO UM OBJETO:
+
+	const meuCarro = {
+		marca: 'toyota',
+		cor: 'prata',
+		ano: 2021,
+		classe: 'sedan',
+		isFlex: true
+	}
+
+SINTAXE:
+
+	const objeto = {
+		(chave)propriedade1: 'Valor',
+		(chave)propriedade2: 'Valor'
+	}
+
+abertura de CHAVES logo apos o =
+propriedades separadas por virgula
+chave e valor separados por dois pontos
+
+
+-ACESSANDO VALORES NOS OBJETOS:
+
+FORMA 1:
+podemos usar a notacao do ponto para acessar as propriedades de um objeto.
+
+	const carro = {
+		marca: 'toyota',
+		cor: 'prata',
+		ano: 2021,
+		classe: 'sedan',
+		isFlex: true
+	}
+
+	const marcaCarro = carro.marca
+	console.log(marcaCarro) // "toyota"
+
+FORMA 2:
+notacao de colchetes, bem parecida com o que vimos para acessar indices de arrays
+
+	const carro = {
+		marca: 'toyota',
+		cor: 'prata',
+		ano: 2021,
+		classe: 'sedan',
+		isFlex: true
+	}
+
+	const marcaCarro = carro['marca'] // string com a chave
+	console.log(marcaCarro) // "toyota"
+
+-REDEFININDO VALORES DE PROPRIEDADES:
+
+	const carro = {
+		marca: 'toyota',
+		ano: 2021,
+		classe: 'sedan',
+		isFlex: true
+	}
+
+	carro.marca = "Ford"
+	carro['isFlex'] = false
+
+      /*
+	marca: 'Ford',
+	ano: 2021,
+	classe: 'sedan',
+	isFlex: false
+      */
+
+-ADICIONANDO PROPRIEDADES AO OBJETO:
+
+	const carro = {
+		marca: 'toyota',
+		cor: 'prata',
+		ano: 2021,
+		classe: 'sedan',
+		isFlex: true
+	}
+	
+	carro.modelo = 'Corolla'
+	carro['quilometragem'] = 20000
+
+	console.log(carro)
+
+      /*
+	marca: 'Toyota',
+	cor: 'prata',
+	ano: 2021,
+	classe: 'sedan',
+	isFlex: false
+	modelo: 'Corolla',
+	quilometragem: 20000
+      */
+
+-ESPELHAMENTO OU SPREAD:
+
+Existe uma sintaxe interessante, em que conseguimos realizar uma copia de um objeto (ou array) inteiro.
+Podemos manipular esta copoia como quisermos (ex: mudar ou adicionar propriedades)
+
+COM OBJETOS:
+
+	const usuario = {
+		nome: 'Astrodev',
+		idade: 25,
+		email: 'astrodev@labenu.com.br'
+	}
+
+	console.log(usuario)
+
+      /*
+	nome: 'Astrodev',
+	idade: 25,
+	email: 'astrodev@labenu.com.br'
+      */
+
+	const novoUsuario = {
+		...usuario,
+		nome: 'Joao',
+		sobrenome: 'Alves'
+	}
+	
+	console.log(novoUsuario)
+
+      /*
+	nome: 'Joao',
+	idade: 25,
+	email: 'astrodev@labenu.com.br',
+	sobrenome: 'Alves'
+      */
+
+COM ARRAYS:
+
+	const listaDeNomes = ["pedro", "chijo", "amanda"]
+	console.log(listaDeNomes) // ["pedro", "chijo", "amanda"]
+
+	const copiaListaDeNomes = [...listaDeNomes]
+	console.log(copiaListaDeNomes) // ["pedro", "chijo", "amanda"]
+
+
+
+-ACESSANDO VALORES DIFERENTES:
+
+Nao eh incomum a existencia de objetos dentro de objetos, objetos dentro de arrays, arrays de objetos, e afins.
+Pode paracer complicado, mas fica mais simples se pensarmos em caminhos.
+O que vamos fazer eh utilizar pontos e colchetes para acessar estruturas que estao contidas em outras.
+
+	const meuObjetoComplexo = {
+		chave1: 'valor1',
+		chave2: 50,
+		chave3: [1, 2, 3],
+		chave4: {
+			chave1: 'valor1',
+			chave2: 'valor2',
+		},
+		chave5: [
+		 {
+			chave1: 'valor1',
+			chave2: 'valor2',
+		 },
+		 {
+			chave1: 'valor1',
+			chave2: 'valor2'
+		 },
+	 	],
+	}
+
+OBJETOS DENTRO DE OBJETOS:
+
+	const paiDePet = {
+		nome: 'Caio Teixeira',
+		pet: {
+			nome: 'Lupin',
+			raca: 'Salsicha',
+			idade: 1,
+		},
+	}
+
+	// acessando a propriedade 'pet' que tem um objeto como valor
+	const pet = paiDePet.pet
+
+	console.log(pet)
+	//{nome: 'Lupin', raca: 'Salsicha', idade: 1},
+
+
+	// acessando a propriedade 'nome' contida no objeto 'pet'
+	const nomeDoPet = pet.nome 
+	
+	console.log(nomeDoPet)
+	//'Lupin'
+
+	
+	//simplificando o caminho e acessando diretamente
+	const nomeDoPet = paiDePet.pet.nome;
+	
+	console.log(nomeDoPet)
+	// 'Lupin'
+
+
+ARRAYS DENTRO DE OBJETOS:
+	
+	const curso = {
+		nome: "Noturno WFS",
+		linguagens: ["JS", "CSS", "HTML"]
+	}
+
+	
+	//acessando a propriedade 'linguagens' que tem um array como valor
+	const linguagens = curso.linguagens
+	
+	console.log(linguagens)
+	//["JS", "CSS", "HTML"]
+
+	
+	//acessando o indice 0 do array linguagens
+	const primeiraLinguagem = linguagens[0]
+
+	console.log(primeiraLinguagem)
+	//"JS"
+
+
+	//simplificando o caminho e acessando diretamente
+	const primeiraLinguagem = curso.linguagens[0]
+
+	console.log(primeiraLinguagem) // "JS"
+
+OBJETOS DENTRO DE ARRAYS (array de objetos)
+
+	//array com objetos dentro
+	const instrutoras = [
+		//objetos separados por virgula, cada um com suas chaves e valores
+		{nome: "Mariana", modulo: 1},
+		{nome: "Juliana", modulo: 2},
+		{nome: "Tay", modulo: 3},
+		{nome: "Fernanda", modulo: 4}
+	]
+
+	//acessando a propriedade "nome" do objeto que esta no indice 0 do array
+	const nomeInstrutora = instrutoras[0].nome
+	
+	console.log(nomeInstrutora) // "Mariana"
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

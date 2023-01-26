@@ -1,0 +1,176 @@
+--Array:
+
+Arrays sao listas de elementos, tipo lista de compras, lista de alunos, lista de numeros da loteria,
+lista telefonica, etc.
+
+Arrays permitem que a gente guarde varios valores numa mesma variavel, e organiza os valores
+utilizando indices.
+
+Podemos dizer que se uma variavel eh como uma gaveta que pode receber algo, um array eh um armario
+que pode receber uma lista de gavetas.
+
+No JS, usamos colchetes para agrupar os itens de uma lista:
+
+	const listaDeCompras = ["batata", "alface", "queijo"]
+	
+	const listaDeNumerosMega = [2, 13, 26, 35, 41, 60]
+
+Arrays funcionam como listas numeradas. Podemos acessar os valores guardados no array indicando sua
+posicao, ou, como vamos chamar por aqui: indice.
+
+obs: comecamos a contagem dos itens no indice 0 e nao no 1
+
+	const listaDeCompras = ["batata", "alface", "queijo"]
+
+	const primeiroItem = listaDeCompras [0]
+	const segundoItem = listaDeCompras [1]
+	const terceiroItem = listaDeCompras [2]
+
+--Prototipo de array:
+
+Assim como as String, os arrays sao objetos internos do JS, entao possuem algumas ferramentas ja criadas
+que podemos acessar e usar.
+
+Este eh o prototipo dos Arrays.
+
+-Length:
+
+A propriedade length nos diz qual eh a quantidade de itens de um array
+
+	const pokemons = ["bulbasalro","squirtle","charmander"]
+
+	console.log(pokemons.length) // 3
+
+
+-Pop():
+
+O metodo pop() remove o ultimo item do array
+
+	const meusPeixes ["palhaco","mandarim","estujao"]
+
+	meusPeixes.pop();
+
+	console.log(meusPeixes) //["palhaco","mandarim",]
+
+-Push (elemento):
+
+O metodo push(elemento) adiciona um ou mais elementos ao final de um array
+
+	const meusPeixes = ["palhaco","mandarim","estujao"]
+
+	meusPeixes.push("salmao")
+	
+	console.log(meusPeixes) //["palhaco","mandarim","estujao", "salmao"]
+
+-Includes (elemento):
+
+O metodo includes(elemento) determina se um array contem um determinado elemento, retornando true ou false
+
+	const serieBoas = ["breaking bad", "brooklyn nine-nine"
+	
+	seriesBoas.includes("breaking bad") // true
+	seriesBoas.includes("game of thrones") // false
+	seriesBoas.includes("breaking") // false
+
+-Splice(i,n):
+
+O metodo splice(i,n) remove n elementos a partir da posicao i do array
+
+	const letras = ["A","B","C","D","E","F","G","H"]
+	// indices (i)   0   1   2   3   4   5   6   7
+
+	letras.splice(2,1)
+	//    letras = ["A","B","D","E","F","G","H"]
+	// indices (i)   0   1   2   3   4   5   6  
+
+	letars.splice(3,2)
+	//    letras = ["A","B","D","G","H"]
+	// indices (i)   0   1   2   3   4   
+
+
+-Arrays e Strings:
+
+Voce deve ter percebido que alguns metodos e propriedades de Strings sao parecidas.
+
+Strings sao de certa forma, arrays (sao listas de caracteres), entao temos metodos que existem tanto
+para um quanto para outro.
+
+Podemos acessar um caractere de String ao passar seu indice, por exemplo.
+
+	const nome = "Alex";
+
+	console.log(nome[2]); // imprime "e"
+
+-Outros:
+
+Existem muitas outras propriedades e metodos de Array, conforme os exemplos abaixo:
+
+unshift() = adiciona novo item como primeiro item do array (indice 0) 
+	
+	const numeros = [1, 2, 3, 4, 5, 6];
+
+	numeros.unshift(0);
+	console.log(numeros) //imprime [0, 1, 2, 3, 4, 5, 6];
+
+shift() = remove o primeiro item do array (indice 0) 
+
+	const numeros = [1, 2, 3, 4, 5, 6];
+
+	numeros.shift();
+	console.log(numeros) //imprime [1, 2, 3, 4, 5, 6];
+
+join (caractere opcional) = Devolve os itens do array concatenados como uma string.
+
+	const fraseQuebrada = ["Olá", "Tudo", "bem", "por aí?"];
+
+	const novaFrase = fraseQuebrada.join();
+	/imprime 'Olá,Tudo,bem,por aí?'
+
+	const novaFrase2 = fraseQuebrada.join(' ');
+	//espaço em branco passado entre caracteres
+	//imprime 'Olá Tudo bem por aí?
+
+	Por padrão, o método join separa os itens do array com uma vírgula
+
+split(limit) = Coloca a string dentro de um array e divide em elementos
+
+indexOf(valor) = devolve o primeiro indice que tenha o valor igual ao passado entre parenteses
+
+	const seriesBoas = ["The Sopranos", "Breaking Bad", "A Grande Família"];
+	const indiceGrandeFamilia = seriesBoas.indexOf("A Grande Família");
+	console.log(indiceGrandeFamilia); //imprime 2
+
+sort () = organiza os itens de um array
+
+reverse () = reverte a ordem dos itens de um array
+
+
+--Copiando arrays:
+
+Arrays sao um pouco mais complicados de copiar do que variasve comuns. Isso acontece porque o array
+eh salvo pelo JS como um endereco de memoria, e nao como um valor.
+
+Se fizermos a atribuicao "comum" ao array, ao alterar um deles, ambos serao alterados:
+
+	const array1 = [1,2,3]
+	const array2 = array1
+
+	console.log(array1)
+	console.log(array2)
+	array1.push(4)
+
+	console.log(array1)
+	console.log(array2)
+
+Entao para criar uma copia de array, precisamos copiar seus valores. Existem varias formas de fazer isso.
+Abaixo, mostramos um exemplo com o metodo slice()
+
+	const array1 = [1,2,3]
+	const array2 = array1.slice();
+
+	console.log(array1)
+	console.log(array2)
+	array1.push(4)
+
+	console.log(array1)
+	console.log(array2)

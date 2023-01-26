@@ -1,0 +1,62 @@
+body{
+    text-align: center;
+
+}
+
+button{
+    height: 10vh;
+    width: 25vw;
+    background-color: rgb(231, 95, 31);
+    border-radius: 10px;
+
+}
+
+button:hover{
+    background-color: orange;
+    color: white;
+}
+
+button:active{
+    background-color: red;
+    color: pink;
+}
+
+div{
+    background-color: greenyellow;
+    margin: 0 auto;
+    width: 15vw;
+
+}
+span{
+    background-color: aqua;
+    width: 20vw;
+    height: 20vh;
+    display: inline;
+    margin: 0 auto;
+}
+
+/* remover bolinhas da lista */
+li{
+    list-style: none;
+    display: inline-block;
+    height: 10vh;
+    width: 10vw;
+    margin-left: 50px;
+    text-align: center;
+
+}
+
+ul{
+    text-align: center;
+}
+
+li:nth-child(1){
+    background-color: lightblue;
+}
+li:nth-child(2){
+    background-color: lightcoral;
+}
+li:nth-child(3){
+    background-color: lightpink;
+}
+

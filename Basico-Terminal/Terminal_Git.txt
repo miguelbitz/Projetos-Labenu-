@@ -1,0 +1,191 @@
+Comandos Terminal:
+
+CLI = linha de comando
+
+ls = Listar conteúdo de um diretório
+- ex.: ls /mnt/c/Users/miguel/
+
+ls -l = lista o conteudo de um diretorio com mais detalhes
+
+ls -a = lista o conteudo de um diretorio inclusive arquivos ocultos
+
+ls - la = lista o conteudo de um diretorio com mais detalhes, mesmo de arquivos e diretorios ocultos
+
+cd = (change directory) Mudar diretório em que estamos localizados
+- ex.: cd /mnt/c/Users/miguel/
+
+cd . = para entrar na pasta dentro da pasta podemos usar . (ponto) e o nome da pasta
+-ex.: cd ./pasta2/
+
+cd .. =	para voltar na pasta anterior .. (ponto)
+
+cd / = vai para o diretório raiz do sistema
+
+cd - = regrassa para o último diretório visitado
+
+nano = Entrar em arquivos
+-ex.: nano test.txt
+
+cat = Listar arquivo
+-ex.: cat test.txt
+
+pwd = mostra o caminho do diretório atual
+
+cp = copia um arquivo ou varios arquivos
+
+mv = move ou renomeia um arquivo
+
+rm = remove um arquivo (apaga sem pedir confirmação)
+rm -r = remove diretorios
+
+mkdir = cria uma nova pasta
+
+touch = Criar arquivos vazio dentro da pasta 
+-ex.: touch test.txt
+
+ctrl + c = interrompe a escução de um comando ou programa dentro do terminal
+
+clear = limpa a tela do prompt
+
+"seta pra cima" = navega pelos ultimos comandos executados
+
+----------------------------
+Git Hub
+
+git clone <<link do repo>> = fazer download do repositorio para o computador
+
+git branch <<nome-da-branch>> = a partir do nosso repositorio podemos criar uma nova branch.
+
+git branch = caso queira visualizar todas as branches abertas no projeto, basta omitir o nome da branco no comando
+
+git branch -d = deletar uma branch
+
+git checkout <<nome-da-branch>> = para entrar em uma branch ja existente. voce vai conseguir ver o codigo que foi realizado nessa ramificação
+
+git status = mostra lista de arquivos modificados, removidos ou criados que ainda nao estao na staging area
+
+git add <<nome-do-arquivo>> = envia as modificações de um determinado arquivo para staging area
+
+git add --all = adiciona todos os arquivos modificados, removidos ou criados no repositorio local para a staging area.
+
+git add . = adiciona todos os arquivos modificados, removidos ou criados na pasta onde voce se encontra para a staging area
+
+git commit -m "Mensagem" = demarca uma versão do seu projeto com os arquivos que estiverem na staging area. 
+A mensagem deve descrever as modificações realizadas
+
+git push origin <<nome-da-branch>> = para subirmos o projeto para o repositório remoto precisamos dar o comando git push,
+o comando git push carrega os commits locais para o repositorio remoto.
+
+git pull = depois de mesclado o projeto é importante sempre atualizar o repositorio local
+
+git pull origin main = os arquivos que serão baixados serão os da versão principal do repo remoto, que estao na branch main do repo.
+
+--QUANDO CRIAMOS UMA BRANCH DO PROJETO, EM ALGUM MOMENTO IREMOS QUERER QUE AS MODIFICAÇÕES FEITAS NESSA RAMIFICAÇÃO SEJAM MESCLADAS COM A BRANCH PRINCIPAL,
+PARA ISSO É NECESSÁRIO CRIAR UM "PULL REQUEST (PR)".
+CRIAR UM "PULL REQUEST" GERA UM PEDIDO PARA AS PESSOAS DO TIME QUE DEVEM REVISAR AS ALTERAÇÕES NO CÓDIGO NUM PROCESSO CHAMADO DE "CODE REVIEW"
+
+--DEPOIS DO "CODE REVIEW", O CÓDIGO PODE SER MESCLADO. BASTA CLICAR NO BOTAO MERGE PULL REQUEST, SE NÃO HOUVEREM CONFLITOS.
+CASO EXISTAM, DEVEM SER RESOLVIDOS NO CÓDIGO. DEPOIS DE MESCLADO O PROJETO, É IMPORTANTE SEMPRE ATUALIZAR O REPOSITORIO LOCAL.
+FAZEMOS ISSO COM O COMANDO "GIT PULL"
+
+
+Fluxo de Git e Github:
+
+FASE 1:
+
+Sempre que clonamos ou fazemos git pull em um repositorio que tem Git, ele tem uma "foto" de como estão todas as coisas (quais são os arquivos e o que tem escrito neles etc).
+Chamamos este estado de tracked (rastreado). É como se recebessemos do repo remoto uma caixa com brinquedos, e uma fotografia da disposição atual destes brinquedos.
+NOTA: É importante que criemos outras branches para alterar o estado atual das coisas. O que a branch faz é criar uma linha do tempo alternativa,
+onde nossas ações com a caixa dessa linha do tempo nao afetam a linha do tempo principal (a main)
+
+Quando há alguma alteração neste estado - criação, edição ou remoção de um arquivo - o Git fica ciente e anota. Cada alteração é indicada por uma palavra diferente:
+
+	- untracked: arquivo novo, portanto, não visto na fotografia
+	- modified: arquivo que não esta mais como na fotografia
+	- deleted: arquivo que existia na fotografia, mas não existe no momento
+
+
+FASE 2:
+
+Quando fazemos git add em nosso diretorio de trabalho, o que estamos fazendo é tirar uma nova foto, para atualizar o que esta sendo rastreado.
+O nome "formal" para essa foto é "STAGING AREA" (area de preparação)
+
+FASE 3:
+
+Podemos atualizar a foto (fazer git add) quantas vezes forem necessárias, e quando estiver tudo certo, devemos nos comprometer com a foto,
+e crias um selo para ela, indicando quais doram as mudanças. Este é o processo de "COMMIT", E DEPOIS DISSO JÁ PODEMOS ENVIAR NOSSA CAIXA PARA O REPO REMOTO.
+
+FASE 4:
+
+Com tudo isso feito, podemos enviar nossa caixa atualizada para o endereço do repositorio remoto.
+Fazemos isso com o comando git push origin <<nome-da-branch>>
+
+FASE 5:
+
+Chegando no repo remoto, precisamos pedir para que as alterações sejam verificadas, e após a verificação,
+mesclar a versão alterada com a principal, para que da proxima vez que houver um clone, a caixa chegue com as novas alterações.
+Estas ações são, respectivamente: o Pull Request e o Merge.
+
+Agora, ao fazer git pull origin main do repo remoto, os arquivos que serão baixados serão os da versão principal do repositório remoto,
+os arquivos que serão baixados serão os da versão principal do repo remoto, que estão na branch mais do repo. Então, nossa caixa e os brinquedos devem estar atualizados.
+
+
+CHEAT-SHEET FLUXO DE TRABALHO GIT (TRABALHANDO A PARTIR DO GITHUB):
+
+	> FORKARO REPOSITORIO REMOTO
+	> GIT CLONE <<LINK-DO-REPO>>
+	> GIT CHECKOUT -B <<NOME-DA-BRANCH>>
+	> REALIZAR ALTERAÇÕES NO CÓDIGO
+	> GIT ADD .
+	> GIT COMMIT -M "MENSAGEM DO COMMIT"
+	> GIT PUSH ORIGIN MAIN
+	> *ABRIR O GITHUB
+	> ABRIR O PR
+	> VERIFICAR CONFLITOS
+	> FAZER A MESCLAGEM
+
+CHEAT-SHEET FLUXO DE TRABALHO GIT ( ATUALIZANDO UM REPO QUE JÁ EXISTE)
+
+	> GIT CHECKOUT MAIN (OU MASTER)
+	> GIT PULL
+	> GIT BRANCH <<NOME-DA-BRANCH>>
+	> GIT CHECKOU <<NOME-DA-BRANCH>>
+	> REALIZAR ALTERAÇÕES NO CÓDIGO
+	> GIT ADD .
+	> GIT COMMIT -M "MENSAGEM DO COMMIT"
+	> GIT PUSH ORIGIN <<NOME-DA-BRANCH>>
+	> *ABRIR O GITHUB
+	> ABRIR O PR
+	> VERIFICAR CONFLITOS
+	> FAZER A MESCLAGEM
+
+
+Commits semânticos:
+
+A especificação do Conventional Commits é uma convenção simples para utilizar nas mensagens de commit.
+Ela define um conjunto de regras para criar um histórico de commit explicito, o que facilita a criação de ferramentas automatizadas.
+Esta convenção segue o SemVer, descevendo os recursos, correções e modificações que quebram a compatibilidade nas mensagens de commit.
+
+--Estrutura
+
+Estruturar os commits de forma com que façam sentido quando forem lidos fornecendo o maximo de contexto sem ser repetitivo ou prolixo.
+
+	<tipo>[escopo opcional]: <descrição>
+
+	[corpo opcional]
+
+	[rodapé opcional]
+
+Onde "Tipo" é uma tag que identifica o tipo de alteração feita. Ex.:
+	fixo:
+	feat:
+	BREAKING CHANGE:
+	docs:
+	style:
+	refactor:
+	perf:
+	test:
+
+Escopo adicional pode ser o pacote ou módulo que foi modificado.
+E a "descrição" não deve ser muito maior que um tweet (140 caracteres) e resume a alteração.
+

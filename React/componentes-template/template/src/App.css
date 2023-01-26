@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  gap: 20px;
+}
+
+.logo{
+
+  height: 100px;
+}
+
+.carro ul{
+  list-style: none;
+}
+
+.garagem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px 100px;
+}
+
+#titulo{
+  display: block;
+  width: 100%;
+
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(193, 217, 238);
+  height: 15%;
+  width: 100%;
+  gap: 40px;
+}
+.header{
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: blanchedalmond;
+  width: 100%;
+}
+
+.redes-sociais{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.copywrite{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main{
+  display: flex;
+  flex-grow: 1;
+}
+
+
+
+

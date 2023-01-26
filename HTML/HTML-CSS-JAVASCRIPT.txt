@@ -1,0 +1,154 @@
+-HTML (HyperText Markup Language, ou Linguagem de Marcação de HiperTexto):
+
+	É uma linguagem de marcação baseada em tags (etiquetas). O HTML define, organiza e dá significado
+ao elementos de uma página da web. Sem ele, não há conteúdo, e sem conteúdo, não há página web.
+
+-CSS (Cascading Style Sheets, ou Folhas de Estilo em Cascata):
+
+	É um documento de estilos para o HTML, ou seja, é o que deixa o sistema agradável visualmente.
+	O CSS define a aparÇencia e animações de uma página HTML.
+	Sem o CSS, o HTML é uma página sem separaçãoes visuais.
+
+-JavaScript:
+	
+	Por fim, o JavaScript é uma linguagem de programação extremamente versátil.
+	No nosso caso, ele será responsável por adicional dinamismo às nossas páginas web.
+	Sem o JavaScript, nossas páginas estão sempre estáticas.
+
+-----------------------------------------------------------------------------------------------------
+
+-Variáveis:
+
+	Variáveis são estruturas que armazenam dados. Isso significa que cada "etiqueta" pode ser considerada
+uma variável, já que cada uma possui dados diferentes. Antes de usarmos variáveis, nós precisamos declará-las.
+	Declarar significa criar.
+
+Como declarar variáveis?
+	
+	let minhaVariavel = 100
+	const minhaConstante = 200
+
+	Para criar variáveis, sempre seguiremos a estrutura: 
+		( declaração >> nome da variável >> atribuição >> valor)
+
+Como nomear variáveis?
+
+	Devemos escolher nomes significativos, ou seja, seu eu quero declarar minha idade,
+então usarei um termo que deixe isto claro. Por isso, não podemo começar com números ou caracteres especiais.
+	camelCase: primeira letra é minúscula entre as palavras é maiúscula.
+	
+	exempreDeNome = nome
+
+Declarando variável const:
+
+	Qual dado da nossa vida nunca irá mudar? Podemos pensar em CPF e data de nascimento, certo?
+	Quando uma variável é declarada usando const, não podemos alterar seu valor inicial.
+
+	Exemplo 1
+		const cpf = 12345678900
+
+	Exemplo 2
+		const dataDeNascimento = 12/12/2022
+
+Declarando variável let:
+
+	E o contrário de algo constante? Nossa idade, certo? Já que é um dado que muda todo ano.
+	Quando uma variável é declarada usando let, podemos alterar seu valor ao longo do código.
+
+	Exemplo 1
+		let idade = 33
+		idade = 34
+
+	Exemplo 2
+		let preco = 2.50
+		preco = 2.65
+
+	Importante: Ao redefinir um valor let, não precisamos escrever "let" novamente.
+
+Tipos de dados primitivos:
+
+	As variáveis do JS assumem tipo que representam o que pode ser inserido nela:
+		Números: qualquer número, e em qualquer formato
+		Textos: que são chamados de strings
+		Booleanos: representam apenas dois valores possíveis true ou false
+
+	Números:
+		Também chamado de number, pode ser qualquer tipo de formatação.
+
+		Sintaxe:
+			let idade = 32
+			let temperatura = 10
+			let preco = 3.50
+
+		Como podemos observar, os números podem ser de diferentes formatos: 1, 2, 4.5, 432, -62.5
+
+	Strings:
+		São os tipos que representam conjuntos de caracteres --> texto.
+
+		Sintaxe:
+			const nome = "Fulano"
+			let estadoCivil = "Solteiro"
+
+		Como podemos observar, todo texto deve estar entre aspas. Caso contrário, não será lido como texto.
+
+	Booleanos:
+		São tipos que só assumem os valores true ou false.
+
+		Sintaxe:
+			let souMenorDeIdade = true
+
+		Como podemos observar, diferente de número e strings, em booleanos só é óssível ter dois resultados.
+
+Tipos para o que não tem tipo??
+	
+	Temos dois tipos para valores que ainda não tem seu valor definido, ou que tem valor anulado de propósito
+
+	undefined: tipo que representa a falta de valor de uma variável
+		let novaVariavel
+		typeof novaVariavel // undefined
+
+		novaVariavel = 2
+		typeof novaVariavel // number
+
+		novaVariavel = undefined
+		typeof novaVariavel // undefined
+
+	null: tipo que representa a falta intencional de valor de uma variável
+		let minhaVariavel
+		console.log(minhaVariavel)
+		// imprime undefined
+
+		minhaVariavel = null
+		console.log(minhaVariavel)
+		// null
+
+Transformações e tipo:
+
+	Podemos descobrir o tipo de uma variavel ou constante usando typeof
+
+	Sintaxe:
+		const got = "Game Of Thrones"
+		const temporadasDeGot = 8
+
+		typeof got -> string
+		typeof temporadasDeGot -> number
+
+	E caso o tipo não seja o que precisamos, podemos transformá-lo. Chamamos esta operação de casting:
+
+	Sintaxe:
+		const temporadasDeGot = 8
+		const textoTemporadasDeGot = String (temporadasDeGot)
+
+		typeof temporadasDeGot -> number
+		typeof textoTemporadasDeGot -> string
+
+Transformações de tipo:
+
+	No entanto, nem sempre as transformações darão certo. O que acontece, por exemplo, 
+se tentarmos converter para número a String "cinco"?
+
+	const numeroConvertido = Number ("cinco");
+	console.log(numeroConvertido); // devolve NaN
+
+	NaN é um tipo especial de valor numérico, que diz que um valor, apesar de ser do tipo Number, 
+não é realmente um número. NaN, significa Not a Number.

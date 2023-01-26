@@ -1,0 +1,59 @@
+*Operadores
+
+-Forma padrão:
+
+-soma = +
+-subtração = -
+-multiplicação = *
+-exponenciação = **
+-divisão = /
+-módulo (ou resto da divisão) = %
+
+-Operando e Atribuindo:
+
+	Podemos calcular e atribuir um valor de uma vez só, usando as sintaxes abaixo.
+Esta forma só funciona com variáveis let, pois precisamos atualizar o valor.
+
+Ex.: 
+let a = 5
+let b = 2
+b += a // b=7 (pois b = b+a)
+
+	Esse método podemos usar na soma, multiplicação, subtração e divisão.
+
+-Incrementos e Decrementos:
+
+	Especificamente com some e subtração, temos uma sintace para subir (+1) ou
+descer (-1) o valor de uma variável numérica.
+
+	Incremento:
+	let a = 5
+	a++ // a = a + 1
+	console.log(a) // a = 6
+
+	Decremento:
+	let a = 5
+	a-- // a = a - 1
+	console.log(a) // a = 4
+
+*Operadores Relacionais:
+
+	Operadores Relacionais (ou Comparadores) são operadores que permitem comprar valores
+de variáveis. O resultado de uma operação relacional sempre é um valor booleano, que diz se
+a comparação é verdadeira (true) ou falsa (false)
+
+		Igual/Diferente: 
+	     ===                !==
+	=== verifica se o valor e o tipo são iguais
+	!== verifica se o valor e o tipo são diferentes
+
+		Maior/Menor
+		>	<
+	> verifica se o primeiro é maior que o segundo
+	< verifica se o primeiro é menor que o segundo
+
+		(Maior/Menor) ou igual
+		>=		<=
+	>= verifica se o primeiro é maior ou igual ao segundo
+	<= verifica se o primeiro é menor ou igual ao segundo
+
