@@ -55,7 +55,7 @@ console.log(soma);
 } */
 
 //----invertendo string (em forma de data) e ordenar
-const consultas = [
+/* const consultas = [
   { nome: "João", dataDaConsulta: "01/10/2021" },
   { nome: "Pedro", dataDaConsulta: "02/07/2021" },
   { nome: "Paula", dataDaConsulta: "03/11/2021" },
@@ -91,5 +91,22 @@ function retornaArrayOrdenadoPorData(consultas) {
 
 }
 
-console.log(retornaArrayOrdenadoPorData(consultas))
+console.log(retornaArrayOrdenadoPorData(consultas)) */
 
+
+const pokemons = [
+  { nome: "Bulbasaur", tipo: "grama" },
+  { nome: "Bellsprout", tipo: "grama" },
+  { nome: "Charmander", tipo: "fogo" },
+  { nome: "Vulpix", tipo: "fogo" },
+  { nome: "Squirtle", tipo: "água" },
+  { nome: "Psyduck", tipo: "água" },
+]
+
+const funcaoProcurar = (parametro) =>{
+  const procurar = pokemons.filter(procurar => procurar.nome.includes())
+
+  console.log(procurar)
+}
+
+funcaoProcurar('Bulbasaur')

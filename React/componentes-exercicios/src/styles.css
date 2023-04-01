@@ -72,3 +72,18 @@ footer {
 h4 {
   margin-left: 20px;
 }
+
+.box-usuario{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box-pagina-principal{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+
+}
+
+.img-usuario{
+  height: 100px;
+  width: 100%;
+}
