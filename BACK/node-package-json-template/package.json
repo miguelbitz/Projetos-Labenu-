@@ -1,0 +1,16 @@
+{
+  "name": "ozemela-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "retornaBrasil": "clear && node index.js braz",
+    "retornaPaisesB": "clear && node pratica2b.js b",
+    "addCountry": "node index.js b",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "miguel alves",
+  "license": "ISC"
+}

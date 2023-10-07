@@ -1,0 +1,16 @@
+.App{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao{
+  background-color: hsl(193, 95%, 68%);
+  margin: 1rem;
+  width: 9rem;
+  height: 2rem;
+  border-radius: 9px;
+  border: none;
+  color: orangered;
+}
